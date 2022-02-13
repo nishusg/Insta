@@ -17,9 +17,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(req.body);
+
   User.create(req.body, function (err, user) {
-    console.log(user);
+
     if (err) {
       return res.render("register");
     }
